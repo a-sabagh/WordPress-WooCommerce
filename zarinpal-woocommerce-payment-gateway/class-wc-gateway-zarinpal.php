@@ -413,7 +413,7 @@ function Load_ZarinPal_Gateway()
                             if ($Notice)
                                 wc_add_notice($Notice, 'success');
 
-                            do_action('WC_ZPal_Return_from_Gateway_Success', $order_id, $Transaction_ID);
+                            do_action('WC_ZPal_Return_from_Gateway_Success', $order_id, $Transaction_ID, $result['data']);
 
                             wp_redirect(add_query_arg('wc_status', 'success', $this->get_return_url($order)));
                             exit;
